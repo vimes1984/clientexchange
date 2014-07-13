@@ -1,0 +1,9 @@
+{
+	"name": "client-exchange-plugin",
+	"version": "1.0.0",
+	"dependencies": {},
+	"repository": {
+  		"type": "git",
+  		"url": "git@github.com:vimes1984/clientexchange.git"
+  	}
+}
