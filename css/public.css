@@ -1,0 +1,972 @@
+/*
+*
+*General plugin css goes in here.... 
+* 1) additional info including animation
+* 2) forms
+*   2.a) form validation
+* 3) listing page
+*
+*/
+/*--------------------------------------------------------------
+1 - Additional info pop down
+--------------------------------------------------------------*/
+.angular-center-container {
+  position: fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  display:table;
+  z-index:9999;
+}
+.angular-centered {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.post-content .addinfoinner h1, .post-content .addinfoinner h3{color: white;}
+.addinfoinner form input{
+    display: inline-block;
+}
+.addinfoinner form p{
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+}
+.addinfoinner form{
+    display: table;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.addinfoinner .resultspo{
+    color: #fff;
+      -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.addinfoinner .resultspo:hover{
+  background-color: #2d5107;
+
+}
+.addinfoinner .resultspo p{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+.addinfoinner{
+  background: #46785a;
+  color: #fff;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: normal;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 10px 10px 40px 10px;
+  max-height: 40%;
+  margin: 2%;
+  min-width: 400px;
+  position: relative;
+}
+.addealinfo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.71);
+    z-index: 99999;
+}
+.closethis:hover{
+  font-weight: bold;
+        -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+.closethis{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+    color: #fff;
+    text-align: right;
+    z-index: 99999;
+    font-size: 24px;
+    display: block;
+}
+.notepo{margin:0;}
+.stuff-to-show.ng-hide-add,
+.stuff-to-show.ng-hide-remove {
+  display: block!important;
+}
+.addealinfo.ng-hide {
+}
+.addealinfo.ng-hide-add{ 
+  display: block!important;
+  -webkit-animation:  bounceOutUp 0.8s;
+  -moz-animation:  bounceOutUp 0.8s;
+  -o-animation:  bounceOutUp 0.8s;
+  animation:  bounceOutUp 0.8s;
+}
+
+.addealinfo.ng-hide-remove {
+  -webkit-animation:  bounceInDown 0.8s;
+  -moz-animation:  bounceInDown 0.8s;
+  -o-animation:  bounceInDown 0.8s;
+  animation:  bounceInDown 0.8s;
+
+}
+.addealinfo.ng-hide-remove.ng-hide-remove-active { 
+}
+/*--------------------------------------------------------------
+2 - Forms
+--------------------------------------------------------------*/
+
+.standard-form{
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    -moz-transition: opacity 0.7s ease;
+    -o-transition: opacity 0.7s ease;
+    -webkit-transition: opacity 0.7s ease;
+    transition: opacity 0.7s ease;
+}
+
+.fadeing.standard-form{
+    opacity: 1;
+    -moz-transition: opacity 0.7s ease;
+-o-transition: opacity 0.7s ease;
+-webkit-transition: opacity 0.7s ease;
+transition: opacity 0.7s ease;
+}
+textarea,
+input[type=text],
+input[type=text],
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=search],
+input[type=text],
+#clientform .standard-form textarea,
+#clientform .standard-form input[type=text],
+#clientform .standard-form input[type=text],
+#clientform .standard-form input[type=color],
+#clientform .standard-form input[type=date],
+#clientform .standard-form input[type=datetime],
+#clientform .standard-form input[type=datetime-local],
+#clientform .standard-form input[type=email],
+#clientform .standard-form input[type=month],
+#clientform .standard-form input[type=number],
+#clientform .standard-form input[type=range],
+#clientform .standard-form input[type=search],
+#clientform .standard-form input[type=tel],
+#clientform .standard-form input[type=time],
+#clientform .standard-form input[type=url],
+#clientform .standard-form input[type=week],
+#clientform .standard-form select,
+#clientform .standard-form input[type=password],
+#clientform .dir-search input[type=search],
+#clientform .dir-search input[type=text],
+#clientform .groups-members-search input[type=search],
+#clientform .groups-members-search input[type=text] 
+{
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 0;
+  color: #888;
+  font: inherit;
+  font-size: 100%;
+  padding: 6px;
+}
+#clientform .standard-form select, select {
+  padding: 3px;
+}
+#clientform .standard-form input[type=password] {
+  margin-bottom: 5px;
+}
+#clientform .standard-form label,label,
+#clientform .standard-form span.label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 5px 0;
+}
+#clientform .standard-form div.checkbox label:nth-child(n+2),
+#clientform .standard-form div.radio div label {
+  color: #888;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 5px 0 0 0;
+}
+#clientform .standard-form#sidebar-login-form label, label {
+  margin-top: 5px;
+}
+#clientform .standard-form input[type=text], input[type=text] {
+  width: 75%;
+}
+#clientform .standard-form#sidebar-login-form input[type=text],
+#clientform .standard-form#sidebar-login-form input[type=password] {
+  padding: 4px;
+  width: 95%;
+}
+#clientform .standard-form #basic-details-section input[type=password],
+#clientform .standard-form #blog-details-section input#signup_blog_url {
+  width: 35%;
+}
+#clientform .standard-form#signup_form input[type=text],
+#clientform .standard-form#signup_form textarea,
+#clientform .form-allowed-tags,
+#clientform #commentform input[type=text],
+#clientform #commentform textarea {
+  width: 90%;
+}
+#clientform .standard-form#signup_form div.submit {
+  float: right;
+}
+#clientform div#signup-avatar img {
+  margin: 0 15px 10px 0;
+}
+#clientform .standard-form textarea {
+  width: 75%;
+  height: 120px;
+}
+#clientform .standard-form textarea#message_content {
+  height: 200px;
+}
+#clientform .standard-form#send-reply textarea {
+  width: 97.5%;
+}
+#clientform .standard-form p.description {
+  color: #888;
+  font-size: 80%;
+  margin: 5px 0;
+}
+#clientform .standard-form div.submit {
+  clear: both;
+  padding: 15px 0 0 0;
+}
+#clientform .standard-form p.submit {
+  margin-bottom: 0;
+  padding: 15px 0 0 0;
+}
+#clientform .standard-form div.submit input {
+  margin-right: 15px;
+}
+#clientform .standard-form div.radio ul {
+  margin: 10px 0 15px 38px;
+  list-style: disc;
+}
+#clientform .standard-form div.radio ul li {
+  margin-bottom: 5px;
+}
+#clientform .standard-form a.clear-value {
+  display: block;
+  margin-top: 5px;
+  outline: none;
+}
+#clientform .standard-form #basic-details-section,
+#clientform .standard-form #blog-details-section,
+#clientform .standard-form #profile-details-section {
+  float: left;
+  width: 48%;
+}
+#clientform .standard-form #profile-details-section {
+  float: right;
+}
+#clientform .standard-form #blog-details-section {
+  clear: left;
+}
+#clientform .standard-form input:focus,
+#clientform .standard-form textarea:focus,
+#clientform .standard-form select:focus {
+  background: #fafafa;
+  color: #555;
+}
+#clientform form#send-invite-form {
+  margin-top: 20px;
+}
+#clientform div#invite-list {
+  background: #f5f5f5;
+  height: 400px;
+  margin: 0 0 10px;
+  overflow: auto;
+  padding: 5px;
+  width: 160px;
+}
+#clientform button,
+#clientform a.button,
+#clientform input[type=submit],
+#clientform input[type=button],
+#clientform input[type=reset],
+#clientform ul.button-nav li a,
+#clientform div.generic-button a,
+#clientform .comment-reply-link,
+a.bp-title-button {
+  background: #fff; /* Old browsers */
+  border: 1px solid #ccc;
+  color: #777;
+  font-size: .8rem;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+#clientform button:hover,
+#clientform a.button:hover,
+#clientform a.button:focus,
+#clientform input[type=submit]:hover,
+#clientform input[type=button]:hover,
+#clientform input[type=reset]:hover,
+#clientform ul.button-nav li a:hover,
+#clientform ul.button-nav li.current a,
+#clientform div.generic-button a:hover,
+#clientform .comment-reply-link:hover {
+  background: #ededed;
+  border: 1px solid #bbb;
+  color: #555;
+  outline: none;
+  text-decoration: none;
+}
+
+#clientform form.standard-form .left-menu {
+  float: left;
+}
+
+#clientform form.standard-form .left-menu #invite-list ul{
+  margin:1%;
+  list-style: none;
+}
+
+#clientform form.standard-form .left-menu #invite-list ul li {
+  margin:0 0 0 1%;
+}
+
+#clientform form.standard-form .main-column {
+  margin-left: 190px;
+}
+
+#clientform form.standard-form .main-column ul#friend-list {
+  clear:none;
+  float: left;
+}
+
+#clientform form.standard-form .main-column ul#friend-list h4 {
+  clear:none;
+}
+/*--------------------------------------------------------------
+2.a - Form validation
+--------------------------------------------------------------*/
+/* Overrides for embedded WP editors */
+#clientform .wp-editor-wrap a.button,
+#clientform .wp-editor-wrap button,
+#clientform .wp-editor-wrap input[type=submit],
+#clientform .wp-editor-wrap input[type=button],
+#clientform .wp-editor-wrap input[type=reset],
+#clientform .wp-editor-wrap input[type=url],
+#clientform .wp-editor-wrap textarea{
+  padding: 0 10px 1px;
+}
+#clientform .standard-form input[type=text].ng-valid, 
+#clientform .standard-form input[type=date].ng-valid, 
+#clientform .standard-form input[type=number].ng-valid,
+#clientform .standard-form textarea.ng-valid,
+#clientform .standard-form input[type=email].ng-valid,
+#clientform .standard-form input[type=url].ng-valid,
+#clientform .standard-form select.ng-valid{
+    background-color: rgba(160, 206, 78, 1);
+    color: #fff;
+    border: 1px solid #a0ce4e;
+          -moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+    height: inherit;
+}
+#clientform .standard-form input[type=text].ng-invalid.ng-pristine, 
+#clientform .standard-form input[type=date].ng-invalid.ng-pristine, 
+#clientform .standard-form input[type=number].ng-invalid.ng-pristine,
+#clientform .standard-form input[type=text].ng-valid.ng-pristine, 
+#clientform .standard-form input[type=date].ng-valid.ng-pristine, 
+#clientform .standard-form input[type=number].ng-valid.ng-pristine,
+#clientform .standard-form input[type=email].ng-valid.ng-pristine,
+#clientform .standard-form input[type=url].ng-valid.ng-pristine,
+#clientform .standard-form textarea.ng-valid.ng-pristine,
+#clientform .standard-form select.ng-valid.ng-pristine{
+    background-color: #fafafa;
+    color: #fff;
+    border: 1px solid #ccc;
+          -moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+    height: inherit;
+}
+#clientform .standard-form input[type=text].ng-invalid:focus, 
+#clientform .standard-form input[type=date].ng-invalid:focus, 
+#clientform .standard-form input[type=number].ng-invalid:focus,
+#clientform .standard-form input[type=email].ng-invalid:focus,
+#clientform .standard-form input[type=url].ng-invalid:focus,
+#clientform .standard-form textarea.ng-invalid:focus{
+border-color: #8D4342;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #ce8483;
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #FF0300;
+border: 1px solid #8D4342;
+    -moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+#clientform .standard-form input[type=text].ng-invalid.errorinput, 
+#clientform .standard-form input[type=date].ng-invalid.errorinput, 
+#clientform .standard-form input[type=number].ng-invalid.errorinput,
+#clientform .standard-form input[type=text].ng-invalid.errorinput, 
+#clientform .standard-form input[type=date].ng-invalid.errorinput, 
+#clientform .standard-form input[type=number].ng-invalid.errorinput,
+#clientform .standard-form input[type=email].ng-invalid.errorinput,
+#clientform .standard-form input[type=url].ng-invalid.errorinput,
+#clientform .standard-form textarea.ng-invalid.errorinput,
+#clientform .standard-form select.ng-invalid.errorinput{
+  border-color: #a94442;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  background-color: #FFA8A6;
+  color: #fff;
+      -moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+#clientform .standard-form  .ng-pristine  {  }
+#clientform .standard-form  .ng-dirty{  }
+.errorinput.radiowrap{
+  border-color: #a94442;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+background-color: #FFA8A6;
+color: #fff;
+      -moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+.help-block{
+  border-color: #a94442;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+background-color: #FFA8A6;
+color: #fff;
+padding: 4px;
+border-radius: 3px;
+margin-top: 4px;
+      -moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+.drop-box {
+background: #F8F8F8;
+border: 5px dashed #DDD;
+width: 200px;
+height: 65px;
+text-align: center;
+padding-top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+.sel-file {
+  padding: 1px 5px;
+  font-size: smaller;
+  color: grey;
+}
+
+.response {
+  padding-top: 30px;
+}
+
+.response>ul {
+  list-style-type: decimal;
+}
+
+.response li, .response .reqh {
+  color: blue;
+  font-size: smaller;
+  padding-bottom: 5px; 
+}
+
+.progress {
+  display: inline-block;
+  width: 100px; 
+  border: 3px groove #CCC;
+}
+
+.progress div {
+  font-size: smaller;
+  background: orange;
+  width: 0;
+}
+
+.drop-box {
+  background: #F8F8F8;
+  border: 5px dashed #DDD;
+  width: 200px;
+  height: 65px; 
+  text-align: center;
+  padding-top: 35px; 
+}
+
+.drop-box.dragover {
+  border: 5px dashed blue;
+}
+
+.drop-box.dragover-err {
+  border: 5px dashed red;
+}
+
+/* for IE*/
+.js-fileapi-wrapper {
+  display: inline-block;
+  vertical-align: middle; 
+}
+
+button {
+  padding: 1px 5px;
+  font-size: smaller;
+  margin: 0 3px; 
+}
+
+.ng-v {
+  float: right;
+}
+
+.sel-file img {
+  float: left;
+  width: 18px;
+  height: 18px;
+  padding-right: 10px;
+}
+
+.sub {
+  font-size: smaller;
+  color: #777;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.err {
+  font-size: 12px;
+  color: #C53F00;
+  margin: 15px;
+  padding: 15px;
+  background-color: #F0F0F0;
+  border: 1px solid black;
+}
+.addinfoinner #send_message_form{max-width: 300px;}
+.addinfoinner #send_message_form{max-width: 300px;}
+.contactform.addinfoinner{
+    margin-left: 30%;
+    margin-right: 30%;
+    max-height: 50%;
+}
+/*--------------------------------------------------------------
+3 - listing page
+--------------------------------------------------------------*/
+.repeatrow{padding: 1em;}
+.ng-enter, 
+.ng-leave
+{ 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+} 
+ 
+.ng-enter.ng-enter-active, 
+.ng-leave {
+    opacity: 1;
+    right: 0;
+    height: 30px;
+}
+ 
+.ng-leave.ng-leave-active,
+.ng-enter {
+    opacity: 0;
+    right: -50px;
+    height: 0px;
+}
+
+
+input[type="radio"] {
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    background-color: #FFF;
+    border-radius: 4px;
+    -webkit-transition: all 0.15s linear;
+-moz-transition: all 0.15s linear;
+-o-transition: all 0.15s linear;
+transition: all 0.15s linear;
+    border-radius: 50%;
+    border: 6px solid #eee;
+}
+input[type="radio"]:checked + label span {
+    background-color: #FFFFFF;
+    color: #fff;
+    font-size: 41px;
+    background-image: url(images/Ellipse.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: 6px solid #a0ce4e;
+}
+
+#selectors{}
+#selectors .input_wrap{
+    display: inline-block;
+    margin: 0 10px;
+}
+#selectors .input_wrap input{
+    display: none;
+}
+
+#buddypress table.notifications tr.alt td, #buddypress table.notifications-settings tr.alt td, #buddypress table.profile-settings tr.alt td, #buddypress table.profile-fields tr.alt td, #buddypress table.wp-profile-fields tr.alt td, #buddypress table.messages-notices tr.alt td, #buddypress table.forum tr.alt td {
+background-color: #999999!important;
+}
+#tabs{margin: 0;}
+#tabs li{
+    display: inline-block;
+    padding: 10px;
+    margin-right: 0;
+    background-color: #46785a;
+    border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 0;
+}
+#tabs li.active a{
+    color: #747474;
+}
+#tabs li.active{
+    background-color: #f5f5f5;
+    color: #fff;
+}
+#tabs li a{
+    color: #fff;
+}
+.tab{}
+.tab_panel{
+    display: block; padding: 9.5px; margin: 0 0 10px; font-size: 13px; line-height: 20px; word-break: break-all; word-wrap: break-word; 
+    /* white-space: pre; */ 
+    /* white-space: pre-wrap; */ background-color: #f5f5f5; 
+    border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.15); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.tab_panel .one_fourth{}
+.dealsheader{}
+.dealsheader .dealcolumn h3{
+    font-size: 17px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+.dealsheader .dealcolumn{
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    vertical-align: top;
+}
+.dealscontent{}
+.dealscontent .deal:last-child{
+  border: 0;
+}
+.dealscontent .deal{
+    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px 5px 10px 5px;
+}
+.Dealbutton{
+    background-color: #46785a;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear; 
+    color: #fff;
+    border-radius: 3px;
+    margin: 9px auto;
+    padding: 5px;
+    cursor: pointer;
+}
+.Dealbutton:hover{
+    background-color: #000;
+
+}
+.dealscontent .dealcolumn p{
+  
+    overflow: hidden;    text-overflow: ellipsis;   white-space: nowrap;
+    text-align: center;
+}
+.dealscontent .dealcolumn{
+      display: inline-block;
+      width: 12%;   
+      text-align: left;
+      vertical-align: top;
+}
+.dealcolumn.largecol{}
+.dealcolumn.largecol p{}
+.dealcolumn.smallcol{
+    width: 8%;
+}
+.dealcolumn.smallcol p{}
+
+/*Deal SINGLE*/
+#dealscontent_single .top_wrap h2{
+    border-top: 0;
+}
+#dealscontent_single h2{
+    color: #747474;
+    font-size: 24px!important;
+    margin: 20px auto;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+#dealscontent_single{
+    padding: 10px;
+    display: inline-block;
+    width: 71%;
+    border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.15); padding: 10px;
+    margin: 5px;
+    vertical-align: top;
+}
+#dealscontent_single .top_wrap{}
+#dealscontent_single  p span{
+    font-weight: 800;
+    font-size: 14px;
+}
+#dealscontent_single .top_wrap h3{}
+#dealscontent_single .top_wrap p{
+    display: inline-block;
+}
+#dealscontent_single .buy_sell_info{}
+#dealscontent_single .buy_sell_info .sell_buy_info_inner:last-child{
+  border-right: 0;
+}
+#dealscontent_single .buy_sell_info .sell_buy_info_inner{
+    display: inline-block;
+    width: 49%;
+    padding: 25px;
+    border-right: 1px solid #ccc; 
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+#dealscontent_single .buy_sell_info .sell_buy_info_inner h3{
+    text-align: center;
+}
+#dealscontent_single .buy_sell_info .sell_buy_info_inner p span{
+    width: 48%;
+    display: inline-block;
+}
+#dealscontent_single .buy_sell_info .sell_buy_info_inner p{
+    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+#dealscontent_single .salesinfo{}
+#dealscontent_single .salesinfo .colonesalesinfo:last-child{
+  border-right: 0;
+}
+#dealscontent_single .salesinfo .colonesalesinfo{
+    display: inline-block; width: 49%; padding: 25px; border-right: 1px solid #ccc; border-right: 1px solid rgba(0, 0, 0, 0.15);
+    vertical-align: top;
+}
+#dealscontent_single .salesinfo .colonesalesinfo h3{}
+#dealscontent_single .salesinfo .colonesalesinfo p{}
+#dealscontent_single .description_wrap{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+#sidebardeals{
+    display: inline-block;
+    width: 26%;
+    vertical-align: top;
+    border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    margin: 5px;
+}
+#sidebardeals li{list-style: none
+}
+.Dealbutton.button:hover{
+  background-color: #000;
+}
+.Dealbutton.button{
+    border: 0;
+    padding: 11px;
+    text-shadow: 0 0 0;
+    background-color: #46785a; -webkit-transition: all 0.15s linear; -moz-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear; color: #fff; border-radius: 3px; 
+    margin: 19px auto; 
+    padding: 12px; cursor: pointer;
+}
+
+.message_head{
+    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin: 20px;
+}
+.messagecol {
+    width: 33%;
+    display: inline-block;
+}
+.message_indiv:last-child{
+  border-bottom: 0;
+ }
+.message_indiv{
+    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); 
+    margin: 20px;
+}
+.message_indiv .messagecol {}
+.message_indiv .messagecol p{}
+.message_head .messagecol {
+}
+.message_head .messagecol  p{
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.knowwrap{
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px dashed;
+}
+.knowwrap h2{
+    text-decoration: underline;
+}
+.knowwrap h2 a{}
+.knowwrap h2 a:hover{}
+.knowwrap p{}
+.knowwrap a{}
+.my_term-archive{}
+.my_term-archive a{}
+..DOP_ThumbnailGallery_Image{
+  min-height: 150px
+}
+#watchsearch{}
+#watchsearch input{
+    width: 100%;
+    font-size: 18px;
+    height: 32px;
+    margin: 15px  0;
+}
+.progress-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.progress-box .percentage-cur .num {
+  margin-right: 5px;
+}
+
+.progress-box .progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #f2f1f1;
+  margin-bottom: 3px;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 0 2px #D5D4D4 inset;
+  position: relative;
+}
+
+.progress-box .progress-bar .inner {
+  position: relative;
+  width: 0;
+  height:100%;
+  background: #239bd6; 
+}
+
+.progress-bar .inner {
+  height: 0;
+  width: 0;
+  transition: all 1s ease-out;
+}
+
+.progress-bar-slider .inner {
+  transition: none;
+}
+
+.progress-bar-slider .inner:after {
+  content: " ";
+  width: 5px;
+  height: 14px;;
+  background-color:#ccc;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+  margin: 0px;
+}
+
+.progress-slider {
+  opacity: 0;
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 1;
+}
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}
